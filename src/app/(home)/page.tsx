@@ -4,20 +4,6 @@ import { Carousel } from "./components";
 export default function Page() {
   return (
     <>
-      <header className="flex items-center justify-center bg-black p-4 pt-8 text-white">
-        <div className="flex items-start">
-          <Image src="/avatar.png" alt="Avatar" width={33} height={33} />
-          <div className="ml-4 flex flex-col">
-            <span className="text-sm">Boba Guys Passport</span>
-            <span className="text-xs text-gray-accent-6">The NextGen Customer Loyalty Program Experience</span>
-          </div>
-          <div className="ml-8 flex items-center gap-2 self-start">
-            <span className="text-sm font-semibold">637</span>
-            <span className="material-symbols-outlined text-sm">database</span>
-          </div>
-        </div>
-      </header>
-
       <div className="bg-rewoven-ivory flex flex-col gap-8 pt-8">
         <div className="flex gap-4 p-4 pt-8">
           <span className="bg-rewoven-bone flex h-6 w-6 items-center rounded-full px-1 py-2">
