@@ -84,4 +84,5 @@ module.exports = {
   future: {
     hoverOnlyWhenSupported: true,
   },
+  important: true,
 };
