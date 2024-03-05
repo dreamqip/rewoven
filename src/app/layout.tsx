@@ -11,7 +11,7 @@ const inter = Inter({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`antialiased ${inter.variable}`}>
       <PreloadResources />
       <body>{children}</body>
     </html>
