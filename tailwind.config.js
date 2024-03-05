@@ -44,6 +44,7 @@ module.exports = {
           jade: "#00C868",
           biscuit: "#E3B570",
           alabaster: "#FCFBF8",
+          gold: "#E2B570",
         },
       },
       fontFamily: {

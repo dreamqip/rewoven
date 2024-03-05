@@ -30,7 +30,7 @@ const fakeData: Props[] = [
 
 export default function Page() {
   return (
-    <div className="bg-rewoven-ivory flex flex-col gap-8 pt-8">
+    <>
       <div className="flex items-start gap-4 p-4 pt-8">
         <span className="bg-rewoven-bone flex h-6 w-6 items-center rounded-full px-1 py-2">
           <span className="material-symbols-outlined icon-size-16">close</span>
@@ -47,7 +47,7 @@ export default function Page() {
           <StatusCard key={data.level} {...data} />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
