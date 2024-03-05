@@ -27,6 +27,22 @@ module.exports = {
           800: "#1e40af",
           900: "#1e3a8a",
         },
+        gray: {
+          "accent-1": "hsl(var(--accent-1) / <alpha-value>)",
+          "accent-2": "hsl(var(--accent-2) / <alpha-value>)",
+          "accent-3": "hsl(var(--accent-3) / <alpha-value>)",
+          "accent-4": "hsl(var(--accent-4) / <alpha-value>)",
+          "accent-5": "hsl(var(--accent-5) / <alpha-value>)",
+          "accent-6": "hsl(var(--accent-6) / <alpha-value>)",
+          "accent-7": "hsl(var(--accent-7) / <alpha-value>)",
+          "accent-8": "hsl(var(--accent-8) / <alpha-value>)",
+        },
+        rewoven: {
+          ivory: "#F4EEE2",
+          bone: "#E7DECC",
+          caramel: "#C39B5E",
+          jade: "#00C868",
+        },
       },
       fontFamily: {
         sans: [

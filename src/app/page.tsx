@@ -1,22 +1,4 @@
-import { Metadata } from "next";
 import Image from "next/image";
-
-export const metadata: Metadata = {
-  title: "Next.js Enterprise Boilerplate",
-  twitter: {
-    card: "summary_large_image",
-  },
-  openGraph: {
-    url: "https://next-enterprise.vercel.app/",
-    images: [
-      {
-        width: 1200,
-        height: 630,
-        url: "https://raw.githubusercontent.com/Blazity/next-enterprise/main/.github/assets/project-logo.png",
-      },
-    ],
-  },
-};
 
 export default function Page() {
   return (
@@ -26,7 +8,7 @@ export default function Page() {
           <Image src="/avatar.png" alt="Avatar" width={33} height={33} />
           <div className="ml-4 flex flex-col">
             <span className="text-sm">Boba Guys Passport</span>
-            <span className="text-xs text-[#999999]">The NextGen Customer Loyalty Program Experience</span>
+            <span className="text-xs text-gray-accent-6">The NextGen Customer Loyalty Program Experience</span>
           </div>
           <div className="ml-8 flex items-center gap-2 self-start">
             <span className="text-sm font-semibold">637</span>
@@ -35,16 +17,18 @@ export default function Page() {
         </div>
       </header>
 
-      <div className="flex flex-col gap-8 bg-[#F4EEE2] pt-8">
+      <div className="bg-rewoven-ivory flex flex-col gap-8 pt-8">
         <div className="flex gap-4 p-4 pt-8">
-          <span className="flex h-6 w-6 items-center rounded-full bg-[#E7DECC] px-1 py-2">
+          <span className="bg-rewoven-bone flex h-6 w-6 items-center rounded-full px-1 py-2">
             <span className="material-symbols-outlined text-sm">wallet</span>
           </span>
           <div className="flex flex-col items-center gap-3">
             <h1 className="text-lg font-semibold">Mystery Boxes</h1>
-            <p className="text-center text-sm text-[#999999]">Make purchases and earn points to buy mystery boxes.</p>
+            <p className="text-center text-sm text-gray-accent-6">
+              Make purchases and earn points to buy mystery boxes.
+            </p>
           </div>
-          <span className="flex h-6 w-6 items-center rounded-full bg-[#E7DECC] px-1 py-2">
+          <span className="bg-rewoven-bone flex h-6 w-6 items-center rounded-full px-1 py-2">
             <span className="material-symbols-outlined text-sm">lunch_dining</span>
           </span>
         </div>
@@ -54,12 +38,12 @@ export default function Page() {
           <div className="flex flex-col items-center gap-2 rounded-2xl bg-white p-6">
             <div className="flex w-full justify-between">
               <div className="flex flex-col gap-1">
-                <span className="text-sm font-semibold uppercase text-[#999999]">LEVEL 7</span>
+                <span className="text-sm font-semibold uppercase text-gray-accent-6">LEVEL 7</span>
                 <span className="text-lg font-semibold">King Size</span>
               </div>
               <span>25 points</span>
             </div>
-            <p className="text-[#666666]">
+            <p className="text-gray-accent-4">
               Inside, you'll find an array of surprises, but the highlight is a $10 gift card.
             </p>
           </div>
@@ -72,16 +56,16 @@ export default function Page() {
             <p>
               Refer a friend to the Boba Guys Passport program and you'll both get 50 bonus points after their first
               purchase. As of now,{" "}
-              <span className="font-bold text-[#666666]">you have referred 0 friends and earned 0 points.</span>
+              <span className="font-bold text-gray-accent-4">you have referred 0 friends and earned 0 points.</span>
             </p>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="text-lg font-semibold">Your Referral Link</h4>
             <div className="flex gap-4">
-              <a href="#" className="font-semibold text-[#C39B5E]">
+              <a href="#" className="text-rewoven-caramel font-semibold">
                 rewoven.app/ref/EH5NGS/EH5NGS
               </a>
-              <span className="material-symbols-outlined text-[#C39B5E]">content_copy</span>
+              <span className="material-symbols-outlined text-rewoven-caramel">content_copy</span>
             </div>
           </div>
         </div>
@@ -104,15 +88,17 @@ export default function Page() {
           </div>
           <div className="flex flex-col gap-6">
             {Array.from({ length: 4 }).map((_) => (
-              <div className="flex items-start gap-3 border-t border-t-[#999999] pt-6 first:border-t-0 first:pt-0">
+              <div className="flex items-start gap-3 border-t border-t-gray-accent-6 pt-6 first:border-t-0 first:pt-0">
                 <Image src="/avatar.png" alt="Mystery Box" width={60} height={60} />
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-col">
-                    <span className="text-xs uppercase text-[#999999]">Quest</span>
+                    <span className="text-xs uppercase text-gray-accent-6">Quest</span>
                     <span className="font-semibold">Boba in Your Wallet</span>
                   </div>
-                  <p className="text-sm text-[#666666]">Add Boba Guys Pass to your Apple Wallet and earn 25 points</p>
-                  <span className="inline-flex w-fit rounded-2xl bg-[#00C868] px-2 py-1 text-xs font-semibold uppercase text-white">
+                  <p className="text-sm text-gray-accent-4">
+                    Add Boba Guys Pass to your Apple Wallet and earn 25 points
+                  </p>
+                  <span className="bg-rewoven-jade inline-flex w-fit rounded-2xl px-2 py-1 text-xs font-semibold uppercase text-white">
                     Completed
                   </span>
                 </div>

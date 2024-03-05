@@ -3,3 +3,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --accent-1: 0 0% 7%;
+    --accent-2: 0 0% 20%;
+    --accent-3: 0 0% 27%;
+    --accent-4: 0 0% 40%;
+    --accent-5: 0 0% 53%;
+    --accent-6: 0 0% 60%;
+    --accent-7: 0 0% 92%;
+    --accent-8: 0 0% 98%;
+  }
+}
