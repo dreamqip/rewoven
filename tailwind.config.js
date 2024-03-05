@@ -42,6 +42,7 @@ module.exports = {
           bone: "#E7DECC",
           caramel: "#C39B5E",
           jade: "#00C868",
+          biscuit: "#E3B570",
         },
       },
       fontFamily: {
