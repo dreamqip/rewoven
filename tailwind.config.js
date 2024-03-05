@@ -43,6 +43,7 @@ module.exports = {
           caramel: "#C39B5E",
           jade: "#00C868",
           biscuit: "#E3B570",
+          alabaster: "#FCFBF8",
         },
       },
       fontFamily: {
