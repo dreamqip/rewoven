@@ -6,7 +6,7 @@ import { cn } from "~/lib/utils";
 const badgeVariants = cva("inline-flex items-center rounded-2xl px-2 py-1 text-xs font-semibold uppercase", {
   variants: {
     variant: {
-      default: "bg-zinc-900 text-zinc-50 ",
+      default: "bg-rewoven-gold text-white",
       completed: "bg-rewoven-jade text-white",
       uncompleted: "bg-gray-accent-6 text-white",
     },
