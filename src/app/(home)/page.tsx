@@ -1,21 +1,74 @@
+"use client";
+
+import * as Dialog from "@radix-ui/react-dialog";
+import { AnimatePresence, Variants, motion } from "framer-motion";
 import Image from "next/image";
-import { Carousel } from "./components";
 import Link from "next/link";
+import { useState } from "react";
+import { Carousel, Menu } from "./components";
+
+const variants: Variants = {
+  hidden: { opacity: 0, scale: 0.9, y: 20 },
+  visible: { opacity: 1, scale: 1, y: 0 },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
 
 export default function Page() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <div className="flex gap-4 p-4 pt-8">
-        <Link href="/statuses-and-tiers" className="bg-rewoven-bone flex h-6 w-6 items-center rounded-full px-1 py-2">
+        <Link href="/statuses-and-tiers" className="flex h-6 w-6 items-center rounded-full bg-rewoven-bone px-1 py-2">
           <span className="material-symbols-outlined icon-size-16">wallet</span>
         </Link>
         <div className="flex flex-col items-center gap-3">
           <h1 className="text-lg font-semibold">Mystery Boxes</h1>
           <p className="text-center text-sm text-gray-accent-6">Make purchases and earn points to buy mystery boxes.</p>
         </div>
-        <span className="bg-rewoven-bone flex h-6 w-6 items-center rounded-full px-1 py-2">
-          <span className="material-symbols-outlined icon-size-16">lunch_dining</span>
-        </span>
+        <Dialog.Root open={open} onOpenChange={setOpen}>
+          <Dialog.Trigger asChild>
+            <button className="flex h-6 w-6 items-center rounded-full bg-rewoven-bone px-1 py-2">
+              <span className="material-symbols-outlined icon-size-16">lunch_dining</span>
+            </button>
+          </Dialog.Trigger>
+          <AnimatePresence>
+            {open ? (
+              <Dialog.Portal forceMount>
+                <Dialog.Overlay className="fixed inset-0 grid place-items-center overflow-y-auto">
+                  <Dialog.Content asChild>
+                    <motion.div
+                      className="fixed inset-0 z-50 overflow-auto bg-rewoven-ivory pt-8"
+                      transition={{ duration: 0.2, type: "tween", ease: "easeInOut" }}
+                      variants={variants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                    >
+                      <Menu
+                        close={
+                          <Dialog.Close asChild>
+                            <button
+                              className="flex size-6 items-center rounded-full bg-rewoven-bone px-1 py-2"
+                              aria-label="Close"
+                            >
+                              <span className="material-symbols-outlined icon-size-16">close</span>
+                            </button>
+                          </Dialog.Close>
+                        }
+                      />
+                    </motion.div>
+                  </Dialog.Content>
+                </Dialog.Overlay>
+              </Dialog.Portal>
+            ) : null}
+          </AnimatePresence>
+        </Dialog.Root>
       </div>
 
       <div className="min-w-0">
@@ -35,7 +88,7 @@ export default function Page() {
         <div className="flex flex-col gap-2">
           <h4 className="text-lg font-semibold">Your Referral Link</h4>
           <div className="flex gap-4">
-            <a href="#" className="text-rewoven-caramel font-semibold">
+            <a href="#" className="font-semibold text-rewoven-caramel">
               rewoven.app/ref/EH5NGS/EH5NGS
             </a>
             <span className="material-symbols-outlined text-rewoven-caramel">content_copy</span>
@@ -69,7 +122,7 @@ export default function Page() {
                   <span className="font-semibold">Boba in Your Wallet</span>
                 </div>
                 <p className="text-sm text-gray-accent-4">Add Boba Guys Pass to your Apple Wallet and earn 25 points</p>
-                <span className="bg-rewoven-jade inline-flex w-fit rounded-2xl px-2 py-1 text-xs font-semibold uppercase text-white">
+                <span className="inline-flex w-fit rounded-2xl bg-rewoven-jade px-2 py-1 text-xs font-semibold uppercase text-white">
                   Completed
                 </span>
               </div>
