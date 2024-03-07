@@ -5,7 +5,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <Header />
-      <div className="bg-rewoven-ivory flex flex-col gap-8 pt-8">{children}</div>
+      <div className="flex min-w-0 flex-col gap-8 bg-rewoven-ivory pt-8">{children}</div>
     </>
   );
 }

@@ -1,46 +1,34 @@
 "use client";
 
-import { useState } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselApi,
-  useDotButton,
-  CarouselDotButton,
-} from "~/components/ui/carousel";
+import Image from "next/image";
 import Card from "./card";
-import clsx from "clsx";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
 
 export default function HomeCarousel() {
-  const [api, setApi] = useState<CarouselApi>();
-
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(api);
-
   return (
-    <Carousel setApi={setApi} opts={{ containScroll: false }} className="pb-8 pt-4">
-      <CarouselContent>
-        <CarouselItem className="flex-[0_0_85%]">
+    <>
+      {/* TODO: Change image on slide change with an animation */}
+      <Image className="mx-auto mb-6" src="/mystery-box.png" alt="Mystery Box" width={240} height={240} />
+
+      <Swiper
+        centeredSlides
+        spaceBetween={16}
+        slidesPerView={1.15}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        <SwiperSlide>
           <Card />
-        </CarouselItem>
-        <CarouselItem className="flex-[0_0_85%]">
+        </SwiperSlide>
+        <SwiperSlide>
           <Card />
-        </CarouselItem>
-        <CarouselItem className="flex-[0_0_85%]">
+        </SwiperSlide>
+        <SwiperSlide>
           <Card />
-        </CarouselItem>
-      </CarouselContent>
-      <div className="mt-6 flex items-center justify-center gap-2">
-        {scrollSnaps.map((_, index) => (
-          <CarouselDotButton
-            key={index}
-            onClick={() => onDotButtonClick(index)}
-            className={clsx("h-1.5 w-1.5 rounded-full bg-gray-accent-6 transition-colors", {
-              "bg-rewoven-caramel": index === selectedIndex,
-            })}
-          />
-        ))}
-      </div>
-    </Carousel>
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
 }

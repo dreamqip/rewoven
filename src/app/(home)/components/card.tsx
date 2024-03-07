@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function Card() {
   return (
     <div className="flex flex-col items-center gap-6">
-      <Image src="/mystery-box.png" alt="Mystery Box" width={240} height={240} />
       <div className="flex flex-col items-center gap-2 rounded-2xl bg-white p-6">
         <div className="flex w-full justify-between">
           <div className="flex flex-col gap-1">

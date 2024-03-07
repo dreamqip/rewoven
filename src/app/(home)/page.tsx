@@ -1,24 +1,26 @@
 import Image from "next/image";
 import { Carousel } from "./components";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <>
       <div className="flex gap-4 p-4 pt-8">
-        <span className="bg-rewoven-bone flex h-6 w-6 items-center rounded-full px-1 py-2">
-          <span className="material-symbols-outlined text-sm">wallet</span>
-        </span>
+        <Link href="/statuses-and-tiers" className="bg-rewoven-bone flex h-6 w-6 items-center rounded-full px-1 py-2">
+          <span className="material-symbols-outlined icon-size-16">wallet</span>
+        </Link>
         <div className="flex flex-col items-center gap-3">
           <h1 className="text-lg font-semibold">Mystery Boxes</h1>
           <p className="text-center text-sm text-gray-accent-6">Make purchases and earn points to buy mystery boxes.</p>
         </div>
         <span className="bg-rewoven-bone flex h-6 w-6 items-center rounded-full px-1 py-2">
-          <span className="material-symbols-outlined text-sm">lunch_dining</span>
+          <span className="material-symbols-outlined icon-size-16">lunch_dining</span>
         </span>
       </div>
 
-      {/* TODO: Fix layout overflow */}
-      <Carousel />
+      <div className="min-w-0">
+        <Carousel />
+      </div>
 
       <div className="flex flex-col gap-4 bg-white px-4 py-8">
         <span className="material-symbols-outlined">diversity_1</span>
