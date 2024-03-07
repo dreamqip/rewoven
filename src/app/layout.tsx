@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`antialiased ${inter.variable} ${source_code_pro.variable}`}>
       <PreloadResources />
-      <body>{children}</body>
+      <body className="mx-auto min-w-0 max-w-md bg-rewoven-ivory">{children}</body>
     </html>
   );
 }
