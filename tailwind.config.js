@@ -38,6 +38,7 @@ module.exports = {
           "accent-8": "hsl(var(--accent-8) / <alpha-value>)",
         },
         rewoven: {
+          midnight: "#1C1B1F",
           ivory: "#F4EEE2",
           bone: "#E7DECC",
           caramel: "#C39B5E",
@@ -45,6 +46,7 @@ module.exports = {
           biscuit: "#E3B570",
           alabaster: "#FCFBF8",
           gold: "#E2B570",
+          butter: "#FFE8C5",
         },
       },
       fontFamily: {
@@ -64,6 +66,17 @@ module.exports = {
           "Segoe UI Emoji",
           "Segoe UI Symbol",
           "Noto Color Emoji",
+        ],
+        mono: [
+          "var(--font-source-code-pro)",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
         ],
       },
       borderWidth: {

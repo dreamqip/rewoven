@@ -3,11 +3,11 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "~/lib/utils";
 
-const badgeVariants = cva("inline-flex items-center rounded-2xl px-2 py-1 text-xs font-semibold uppercase", {
+const badgeVariants = cva("inline-flex items-center rounded-2xl px-2 py-1 text-sm font-semibold uppercase", {
   variants: {
     variant: {
       default: "bg-rewoven-gold text-white",
-      completed: "bg-rewoven-jade text-white",
+      completed: "bg-rewoven-caramel text-white",
       uncompleted: "bg-gray-accent-6 text-white",
     },
   },
